@@ -12,7 +12,7 @@ https://pc-builder-assignment.vercel.app/
 
 ## Build Page
 
-https://pc-builder-assignment.vercel.app/pc-build (Protected Route)
+https://pc-builder-assignment.vercel.app/pc-builder (Protected Route)
 
 ## Categories Page
 
