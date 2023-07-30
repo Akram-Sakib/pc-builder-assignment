@@ -25,7 +25,6 @@ function SideBarMenu({ closeSideBar }) {
     router.push(href);
   };
   const userImage = session?.user?.image || "/img/profile_pic.svg";
-  console.log(session?.user);
   return (
     <div className="relative h-full w-full sideBarMenu bg-white px-8 py-6  font-medium md:hidden">
       <Link href={"/"} className="font-bold">
