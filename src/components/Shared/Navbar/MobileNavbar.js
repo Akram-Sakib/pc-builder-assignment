@@ -1,13 +1,15 @@
 // import Search from "@/components/UI/Search";
-import { Bars3Icon } from "@heroicons/react/24/outline";
-import { ShoppingCartIcon } from "@heroicons/react/24/solid";
+import { Bars3Icon, ComputerDesktopIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import SideBarMenu from "../SidebarMenu/SidebarMenu";
+import { useSelector } from "react-redux";
+import Link from "next/link";
 
 function MobileNavbar() {
   const router = useRouter();
   const [showSideBar, setShowBar] = useState(false);
+  const pcbuild = useSelector((state) => state.pcbuild);
 
   return (
     <>
@@ -17,21 +19,21 @@ function MobileNavbar() {
             <div>
               <Bars3Icon className="w-8" onClick={() => setShowBar(true)} />
             </div>
-            <div className="flex items-center">PC BUILDER</div>
+            <Link href={"/"} className="flex items-center font-bold">
+              PC BUILDER
+            </Link>
           </div>
           <div
             className="relative cursor-pointer"
-            onClick={() => router.push("/cart")}
+            onClick={() => router.push("/pc-builder")}
           >
-            <ShoppingCartIcon className="xl:w-10 w-9 link" />
+            <ComputerDesktopIcon className="xl:w-10 w-9 link" />
             <div className="absolute -top-2 -right-1 rounded-full text-white bg-blue-light p-1 flex items-center justify-center text-xs font-extrabold">
-              6
+              {pcbuild?.qty}
             </div>
           </div>
         </div>
-        <div>
-          {/* <Search /> */}
-        </div>
+        <div>{/* <Search /> */}</div>
       </header>
       <div
         className={`z-40 fixed inset-y-0 left-0 overflow-hidden transition-all duration-300  shadow-2xl  ${

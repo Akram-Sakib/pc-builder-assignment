@@ -27,6 +27,8 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async (context) => {
+  
+  
   try {
     const res = await fetch(
       `https://pc-builder-assignment-server.vercel.app/products?category=${capitalizeFirstLetter(

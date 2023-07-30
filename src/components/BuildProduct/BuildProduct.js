@@ -48,9 +48,9 @@ function BuildProduct({
       </div>
 
       {/* Buttons on the right of the products */}
-      <div className="flex flex-col space-y-4 my-auto  justify-self-end">
+      <div className="flex flex-col space-y-4 my-auto justify-self-end">
         <button
-          className={`button bg-red-600 py-2 lg:px-10 md:px-8 px-6`}
+          className={`button bg-red-600 py-2 lg:px-10 md:px-8 px-6 flex justify-center items-center`}
           onClick={removeItemFromBuild}
         >
           <XMarkIcon className="h-5" />
