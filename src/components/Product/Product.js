@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { StarIcon } from "@heroicons/react/24/solid";
 import { useDispatch } from "react-redux";
 import { addComponent } from "@/redux/features/pcbuild/pcbuildSlice";
+import { useSession } from "next-auth/react";
 
 function Product({
   id,
@@ -18,18 +19,24 @@ function Product({
 }) {
   const router = useRouter();
   const dispatch = useDispatch();
+  const { data: session } = useSession();
 
   const addItemToBuild = () => {
-    dispatch(
-      addComponent({
-        id,
-        name: productName,
-        price,
-        category,
-        image,
-      })
-    );
-    router.push("/pc-builder");
+    if (!session?.user?.email) {
+      alert("Please Sign In to add items to your build");
+      router.push("/api/auth/signin");
+    } else {
+      dispatch(
+        addComponent({
+          id,
+          name: productName,
+          price,
+          category,
+          image,
+        })
+      );
+      router.push("/pc-builder");
+    }
   };
 
   return (
