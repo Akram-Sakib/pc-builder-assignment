@@ -71,9 +71,9 @@ function Footer() {
           </div>
         </div>
         <p className="mt-6 text-gray-200 text-center flex items-center flex-wrap justify-center">
-          Made with <HeartIcon className="w-5 mx-2 text-red-500" /> by
+          Made By <HeartIcon className="w-5 mx-2 text-red-500" /> by
           <span className="text-white hover:underline ml-2">
-            <Link href="https://hazratAli.vercel.app">Hazrat Ali</Link>
+            <Link href="">Team Analytic Titans</Link>
           </span>
         </p>
       </div>
