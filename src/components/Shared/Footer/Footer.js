@@ -8,7 +8,7 @@ function Footer() {
   const gmailHandler = () => {
     window.open(
       "mailto:" +
-        "programmer.hazratali@gmail.com" +
+        "sayedakramsakib@gmail.com" +
         "?subject=" +
         " " +
         "&body=" +
@@ -53,7 +53,7 @@ function Footer() {
                 className="cursor-pointer"
                 alt="linkedin"
                 onClick={() => {
-                  router.push("https://www.linkedin.com/in/hazrat-ali");
+                  router.push("https://www.linkedin.com/in/akram-sakib");
                 }}
               />
             </div>
@@ -65,7 +65,7 @@ function Footer() {
                 objectFit="contain"
                 className="cursor-pointer"
                 alt="github"
-                onClick={() => router.push("https://github.com/hazratali")}
+                onClick={() => router.push("https://github.com/akram-sakib")}
               />
             </div>
           </div>
@@ -73,7 +73,7 @@ function Footer() {
         <p className="mt-6 text-gray-200 text-center flex items-center flex-wrap justify-center">
           Made By <HeartIcon className="w-5 mx-2 text-red-500" /> by
           <span className="text-white hover:underline ml-2">
-            <Link href="">Team Analytic Titans</Link>
+            <Link href="">Akram Sakib</Link>
           </span>
         </p>
       </div>
